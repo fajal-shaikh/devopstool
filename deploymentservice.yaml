@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment # Kubernetes resource kind we are creating
 metadata:
-  name: devopstool-k8s-deployment
+  name: project-jenkins-ansible-kubernetes
 spec:
   selector:
     matchLabels:
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: devopstool-k8s
-          image: khaliddocker1205/devopstool # Image that will be used to containers in the cluster
+          image: fajalshaikh/image1_new # Image that will be used to containers in the cluster
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080 # The port that the container is running on in the cluster
